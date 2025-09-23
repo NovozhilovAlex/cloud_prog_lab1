@@ -3,3 +3,6 @@
 
 <code>docker compose ps</code>
 покажет запущенные контейнеры<br>
+
+<code>docker compose down</code>
+остановит запущенные контейнеры<br>
