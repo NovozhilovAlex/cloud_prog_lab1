@@ -1,2 +1,18 @@
 server:
   port: 8085
+
+cloud:
+  aws:
+    credentials:
+      access-key: 614Y7o8VaExhJju1haydC3
+      secret-key: ajKf1SNNQ46WC5SM6dTxgtpNvh2VnEPsvHcNJeY1howu
+    region:
+      auto: false
+      static: ru-msk
+    stack:
+      auto: false
+
+application:
+  bucket:
+    name: clpr-test-bucket
+
