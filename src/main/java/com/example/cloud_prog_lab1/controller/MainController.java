@@ -12,6 +12,6 @@ public class MainController {
 
     @GetMapping("/greeting")
     public Greeting greeting() {
-        return new Greeting(counter.incrementAndGet(), "Hello!");
+        return new Greeting(counter.incrementAndGet(), "Hello world!");
     }
 }

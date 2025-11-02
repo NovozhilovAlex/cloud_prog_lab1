@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/file")
+@CrossOrigin(origins = "http://localhost:3000")
 public class FileController {
     @Autowired
     private FileService fileService;
@@ -36,7 +37,7 @@ public class FileController {
         return ResponseEntity.ok(new String(data));
     }
 
-    @PostMapping("/{bucketName}/upload")
+    @PostMapping("/upload/{bucketName}")
     public ResponseEntity<String> upload(@PathVariable String bucketName, @RequestBody MultipartFile file) {
         try {
             return new ResponseEntity<>(fileService.uploadFile(file, bucketName), HttpStatus.OK);

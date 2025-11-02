@@ -31,7 +31,7 @@ public class FileService {
     }
 
     public String uploadFile(MultipartFile file, String bucketName) throws IOException {
-        String fileName = System.currentTimeMillis() + "_" + file.getOriginalFilename();
+        String fileName = file.getOriginalFilename();
         File fileObj = new File("src/main/resources/tmp_file.txt");
         try (OutputStream os = new FileOutputStream(fileObj)) {
             os.write(file.getBytes());
