@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloud-prog
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloud-prog
+  template:
+    metadata:
+      labels:
+        app: cloud-prog
+    spec:
+      containers:
+        - name: cloud-prog
+          image: yumeno8/cloud-prog:latest
+          ports:
+            - containerPort: 8086
